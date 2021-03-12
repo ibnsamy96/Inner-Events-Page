@@ -1,0 +1,31 @@
+header {
+    background-color: #FFF8FA;
+}
+
+header img {
+    width: 112px;
+}
+
+header .container {
+	width: fit-content;	
+}
+
+header >* :not(img){
+	text-align:center;
+}
+
+header img {
+	align-self: center;
+}
+
+header h1{
+	
+	color:#183F5D;
+	
+}
+
+header p {
+	
+	color:#808487;
+	
+}
