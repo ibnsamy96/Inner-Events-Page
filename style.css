@@ -1,31 +1,65 @@
+* {
+	font-family: 'Tajawal', sans-serif;
+}
+
 header {
-    background-color: #FFF8FA;
+	background-color: #FFF8FA;
 }
 
 header img {
-    width: 112px;
+	width: 112px;
 }
 
 header .container {
-	width: fit-content;	
+	width: fit-content;
 }
 
-header >* :not(img){
-	text-align:center;
+header>* :not(img) {
+	text-align: center;
 }
 
 header img {
 	align-self: center;
 }
 
-header h1{
-	
-	color:#183F5D;
-	
+header h1 {
+
+	color: #183F5D;
+	font-weight: 700;
+	font-size: 30px;
+
 }
 
 header p {
-	
-	color:#808487;
-	
+
+	color: #808487;
+	max-width: 85%;
+
+}
+
+
+
+.meeting-card:hover {
+	background-color: #FFF8FA;
+
+
+}
+
+
+.guest-img {
+	border-radius: 50%;
+	border: 2px #fff solid;
+	width: 61px;
+}
+
+
+.second-guest {
+
+	margin-right: -30px;
+
+}
+
+.guests-box {
+
+	margin: auto;
 }
