@@ -23,6 +23,7 @@ header .container {
 #pageLogo {
 	/* width: 112px; */
 	width: 80px;
+	max-width: 50%;
 	align-self: center;
 
 }

@@ -18,8 +18,8 @@ const setBodyPaddingTop = () => {
 
     console.log(document.body.style.paddingTop);
 
-    // document.body.scrollTop = 0; // For Safari
-    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 
 }
 
@@ -41,7 +41,7 @@ const setBodyPaddingTop = () => {
 //     setTimeout(setBodyPaddingTop, 501)
 // }
 
-document.addEventListener('DOMContentLoaded', setBodyPaddingTop)
+window.addEventListener('load', setBodyPaddingTop)
 
 
 // window.addEventListener('load', () => {
