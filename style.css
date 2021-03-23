@@ -1,6 +1,9 @@
 * {
 	font-family: 'Tajawal', sans-serif;
+	padding: 0;
+	margin: 0;
 }
+
 
 header {
 	background-color: #FFF8FA;
@@ -37,29 +40,71 @@ header p {
 
 }
 
-
+.meeting-card {
+	border-radius: 10px;
+}
 
 .meeting-card:hover {
 	background-color: #FFF8FA;
-
-
 }
 
 
-.guest-img {
+.guest-circle {
 	border-radius: 50%;
 	border: 2px #fff solid;
-	width: 61px;
+	width: 55px;
+	height: 55px;
 }
 
+.main-guest {
+	z-index: 2;
+}
 
 .second-guest {
 
+	z-index: 1;
 	margin-right: -30px;
 
 }
 
 .guests-box {
 
-	margin: auto;
+	display: flex;
+
+}
+
+.text-center {
+	text-align: center;
+}
+
+.event-tag {
+	color: #0A565F;
+	opacity: 0.5;
+	font-weight: 600;
+}
+
+
+@media (min-width: 960px) {
+
+	.container {
+		max-width: 800px;
+	}
+
+}
+
+.meeting-card h2 {
+	color: #0D1D2A;
+}
+
+.meeting-card p {
+	color: #778692;
+}
+
+.guests-number {
+	background-color: cadetblue;
+	color: whitesmoke;
+}
+
+.guests-number span {
+	font-size: 1.3rem;
 }
