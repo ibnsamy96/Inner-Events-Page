@@ -4,41 +4,42 @@
 	margin: 0;
 }
 
+body {}
+
 
 header {
 	background-color: #FFF8FA;
-}
-
-header img {
-	width: 112px;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 header .container {
 	width: fit-content;
 }
 
+#pageLogo {
+	/* width: 112px; */
+	width: 80px;
+	align-self: center;
+
+}
+
 header>* :not(img) {
 	text-align: center;
 }
 
-header img {
-	align-self: center;
-}
-
-header h1 {
+#pageTitle {
 
 	color: #183F5D;
 	font-weight: 700;
-	font-size: 30px;
+	/* font-size: 30px; */
+	font-size: 22px;
 
 }
 
-header p {
-
-	color: #808487;
-	max-width: 85%;
-
-}
 
 .meeting-card {
 	border-radius: 15px;
@@ -142,4 +143,16 @@ header p {
 .py-4_5 {
 	padding-top: 2rem !important;
 	padding-bottom: 2rem !important
+}
+
+footer {
+	background-color: #FFF8FA;
+
+}
+
+
+#footerTagline {
+
+	color: #808487;
+
 }
