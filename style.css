@@ -2,10 +2,16 @@
 	font-family: 'Tajawal', sans-serif;
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
-body {}
+html {
+	height: 100%;
+}
 
+body {
+	min-height: 100%;
+}
 
 header {
 	background-color: #FFF8FA;
