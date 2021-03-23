@@ -29,6 +29,7 @@ header .container {
 #pageLogo {
 	/* width: 112px; */
 	width: 80px;
+	height: 86.56px;
 	max-width: 50%;
 	align-self: center;
 
@@ -165,5 +166,21 @@ footer {
 #footerTagline {
 
 	color: #808487;
+
+}
+
+@media (max-width: 767px) {
+
+	.tablet-hidden {
+		display: none !important;
+	}
+
+}
+
+@media (max-width: 500px) {
+
+	.mobile-hidden {
+		display: none !important;
+	}
 
 }
