@@ -45,6 +45,7 @@ header>* :not(img) {
 	font-weight: 700;
 	/* font-size: 30px; */
 	font-size: 22px;
+	margin: 0;
 
 }
 
@@ -181,6 +182,13 @@ footer {
 
 	.mobile-hidden {
 		display: none !important;
+	}
+
+	.d-none {
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
 	}
 
 }
