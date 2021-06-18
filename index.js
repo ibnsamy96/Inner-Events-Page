@@ -1,21 +1,18 @@
 const setBodyPaddingTop = () => {
+  console.log("DOMContentLoaded");
 
-    console.log('DOMContentLoaded');
+  const documentHeader = document.querySelector("header");
 
-    const documentHeader = document.querySelector('header')
+  const headerMainHeight = parseFloat(getComputedStyle(documentHeader).height);
 
-    const headerMainHeight = parseFloat(getComputedStyle(documentHeader).height)
+  console.log(headerMainHeight);
 
-    console.log(headerMainHeight);
+  document.body.style.paddingTop = `${headerMainHeight}px`;
 
-    document.body.style.paddingTop = `${headerMainHeight}px`
+  console.log(document.body.style.paddingTop);
 
-    console.log(document.body.style.paddingTop);
+  // document.body.scrollTop = 0; // For Safari
+  // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
 
-    // document.body.scrollTop = 0; // For Safari
-    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-
-}
-
-
-window.addEventListener('load', setBodyPaddingTop)
+window.addEventListener("load", setBodyPaddingTop);
