@@ -1,4 +1,5 @@
-const mainURL = "https://ma3an-apps-default-rtdb.firebaseio.com/inner-events/";
+const mainURL =
+  "https://ma3an-apps-default-rtdb.firebaseio.com/internal-events/";
 
 const endPoints = {
   events: "events.json",
@@ -37,7 +38,7 @@ function getDesiredEndpointUrl(endpoint) {
 
 //-- features functions
 export const getEvents = async () => {
-  const EventsEndpointUrl = getDesiredEndpointUrl("events");
+  const eventsEndpointUrl = getDesiredEndpointUrl("events");
   // let userToken = restoreUserToken();
   let eventsJson = await getData(eventsEndpointUrl); // {event1Id:{event1Value},event2Id:{event2Value} ...}
   let eventsJsonIds = Object.keys(eventsJson); // ids of all events
@@ -57,6 +58,5 @@ export const postEvent = async (eventInfoJson) => {
   // const userToken = restoreUserToken();
   await postData(eventsEndpointUrl, {
     data: eventInfoJson,
-    userToken,
   });
 };
