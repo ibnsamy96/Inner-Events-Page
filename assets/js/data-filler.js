@@ -1,4 +1,4 @@
-```
+/*
 to generate random events and post them paste this code in the index.js file
 
 import { getEventsArray } from "./data-filler.js";
@@ -7,8 +7,7 @@ eventsArray.forEach(function (item, i) {
     postEvent(item);
     console.log("item");
 });
-  
-```;
+*/
 
 const getRandomNumber = (finalNumber) => {
   return Math.random() * finalNumber;
@@ -52,6 +51,11 @@ function getTag(tagType) {
   return neededTag[randomIndex];
 }
 
+function generateRandomDate(start, end) {
+  var date = new Date(+start + Math.random() * (end - start));
+  return date;
+}
+
 function getAttendeeImage() {
   const mainLocation = "./assets/images/";
   const images = ["gary.jfif", "leanne.png", "kevin.jfif", "karl.png"];
@@ -71,12 +75,18 @@ function getAttendees() {
 }
 
 const createEvent = () => {
+  const eventDay = generateRandomDate(new Date(), new Date(2021, 8, 8));
+  const eventStartHour = (1 + Math.random() * (8 - 1)) | 0;
+  const eventEndHour = eventStartHour + 3;
+  const startDate = eventDay.setHours(eventStartHour);
+  const endDate = eventDay.setHours(eventEndHour);
+
   return {
     clicks: Math.floor(getRandomNumber(10)),
     title: getArabicWords(Math.ceil(getRandomNumber(5))),
     description: getArabicWords(Math.ceil(getRandomNumber(20))),
-    startDate: new Date().getTime(),
-    endDate: new Date().getTime(),
+    startDate,
+    endDate,
     attendees: getAttendees(),
     tags: {
       type: getTag("type"),
