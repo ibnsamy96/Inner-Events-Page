@@ -41,12 +41,15 @@ export const getEvents = async () => {
   const eventsEndpointUrl = getDesiredEndpointUrl("events");
   // let userToken = restoreUserToken();
   let eventsJson = await getData(eventsEndpointUrl); // {event1Id:{event1Value},event2Id:{event2Value} ...}
+  if (!eventsJson) {
+    return [];
+  }
   let eventsJsonIds = Object.keys(eventsJson); // ids of all events
-  let eventsArrayOfObjects = eventsJsonIds.map((eventId) => {
+  let eventsArrayOfObjects = eventsJsonIds.map((id) => {
     // returned value -> {event1Id,event1Value}
     return {
-      eventId,
-      ...eventsJson[eventId],
+      id,
+      ...eventsJson[id],
     };
   });
   // .reverse(); // we reverse it to get the latest at the first in the dashboard
