@@ -1,4 +1,5 @@
-import { getEvents, postEvent } from "./assets/js/database-communication.js";
+import { getEvents, postEvent } from "./assets/js/database-communicator.js";
+import { updateUI } from "./assets/js/ui-updater.js";
 
 const setBodyPaddingTop = () => {
   console.log("DOMContentLoaded");
@@ -18,3 +19,7 @@ const setBodyPaddingTop = () => {
 };
 
 window.addEventListener("load", setBodyPaddingTop);
+
+getEvents().then((eventsArray) => {
+  updateUI(eventsArray);
+});
