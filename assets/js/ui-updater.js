@@ -60,9 +60,9 @@ const createEventCard = (eventData) => {
               <div class="month py-2"><span>${getMonthName(
                 new Date(eventData.startDate).getMonth()
               )}</span></div>
-              <div class="day py-2_5 px-4_5"><span>${
-                new Date(eventData.startDate).getMonth() + 1
-              }</span></div>
+              <div class="day py-2_5 px-4_5"><span>${new Date(
+                eventData.startDate
+              ).getDay()}</span></div>
             </div>
           </div>
           <div class="col">

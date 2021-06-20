@@ -1,12 +1,12 @@
 /*
 to generate random events and post them paste this code in the index.js file
 
-import { getEventsArray } from "./data-filler.js";
-const eventsArray = getEventsArray(12);
-eventsArray.forEach(function (item, i) {
-    postEvent(item);
-    console.log("item");
-});
+// import { getEventsArray } from "./assets/js/data-filler.js";
+// const eventsArray = getEventsArray(20);
+// eventsArray.forEach(function (item, i) {
+//   postEvent(item);
+//   console.log("item");
+// });
 */
 
 const getRandomNumber = (finalNumber) => {
